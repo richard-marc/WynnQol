@@ -40,6 +40,7 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
   <br>
   blocks attacks and interacts during macro execution so you dont accidentally fuck spells up
   <br>
+  holding down the keybind loops the spell sequence
   <br>
   /spellmacro [spells] ex: rrr rrr rlr rll
   <br>
