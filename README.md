@@ -55,3 +55,7 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 <br>
   TNA qol, alerts when a void hole spawns. also renders a beacon on its location.
 </details>
+
+
+## Credits
+Credit to Melo for the beacon render stuff
