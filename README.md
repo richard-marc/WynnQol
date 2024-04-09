@@ -14,6 +14,11 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 6. Then, click Enable and the Stopped button to get it running. 
 
 ## Features
+<br>
+## Archer NOT supported ATM. working on a fix
+<br>
+ive only played mage so i had no clue archer spells were different
+<br>
 <details>
 <summary>antiBlindness</summary>
 <br>
