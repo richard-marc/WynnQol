@@ -2,6 +2,7 @@
 
 ## Usage
 Requires JSMacros 1.9.1 BETA (or higher). Crashes with 1.9.0
+<br>
 Full artifact:
 https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 
