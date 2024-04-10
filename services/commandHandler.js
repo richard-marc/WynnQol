@@ -1,7 +1,3 @@
-/* 
-TODO:
-make it so the commands are suggested
-*/
 if (!World.isWorldLoaded()) JsMacros.waitForEvent('ChunkLoad')
 
 var SPELL_SEQUENCE_CONFIG = require('../config/spellSequenceConfig.json');
@@ -18,7 +14,7 @@ const CommandManager = Chat.getCommandManager();
 let command = CommandManager.createCommandBuilder("wynnqol");
 command.unregister();
 
-command.wordArg("module").wordArg("setting").greedyStringArg("things").executes(JavaWrapper.methodToJava((event) => {
+command.wordArg("module").suggestMatching(["spellmacro"]).wordArg("setting").suggestMatching(["spells", "keybind", "delay", "archertoggle"]).greedyStringArg("things").executes(JavaWrapper.methodToJava((event) => {
     if (event.getArg("module") === "spellmacro") {
         if (event.getArg("setting") === "spells") {
             var spells = event.getArg("things").toUpperCase().split(/\s+/); // Split based on whitespace

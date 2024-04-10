@@ -1,8 +1,3 @@
-/*
-spell macro
-uhh do archer support and command handler
-*/
-
 // waiting for world to load
 if (!World.isWorldLoaded()) JsMacros.waitForEvent('ChunkLoad')
 

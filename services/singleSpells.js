@@ -1,15 +1,4 @@
-// replacement for wynntils spells. no queuing system, i plan on doing it at some point. blocks left/right mouse inputs. ACTION_DELAY requires spellMacro.js
-
-/*
-add archer support
-command for toggling archer support, boolean
-make command handler
-archer
-LLL
-LLR
-LRR
-LRL
-*/
+// replacement for wynntils spells. no queuing system, i plan on doing it at some point. blocks left/right mouse inputs.
 
 if (!World.isWorldLoaded()) JsMacros.waitForEvent('ChunkLoad')
 
