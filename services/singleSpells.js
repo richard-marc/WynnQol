@@ -1,10 +1,23 @@
 // replacement for wynntils spells. no queuing system, i plan on doing it at some point. blocks left/right mouse inputs. ACTION_DELAY requires spellMacro.js
 
+/*
+add archer support
+command for toggling archer support, boolean
+make command handler
+archer
+LLL
+LLR
+LRR
+LRL
+*/
+
+if (!World.isWorldLoaded()) JsMacros.waitForEvent('ChunkLoad')
+
 var isMacroRunning = false;
 
 function getActionDelay() {
     var ACTION_DELAY_CONFIG = require('../config/actionDelayConfig.json');
-    var ACTION_DELAY = ACTION_DELAY_CONFIG.action_delay;
+    var ACTION_DELAY = parseInt(ACTION_DELAY_CONFIG.action_delay, 10);
     return ACTION_DELAY;
 }
 
@@ -79,6 +92,43 @@ function RLR() {
 function RLL() {
     Player.getPlayer().interact();
     Player.getPlayer().attack();
+    Time.sleep(getActionDelay());
+    Player.getPlayer().attack();
+    Time.sleep(getActionDelay());
+}
+
+//LLL
+function LLL() {
+    Player.getPlayer().attack();
+    Time.sleep(getActionDelay());
+    Player.getPlayer().attack();
+    Time.sleep(getActionDelay());
+    Player.getPlayer().attack();
+    Time.sleep(getActionDelay());
+}
+
+//LLR
+function LLR() {
+    Player.getPlayer().attack();
+    Time.sleep(getActionDelay());
+    Player.getPlayer().attack();
+    Player.getPlayer().interact();
+    Time.sleep(getActionDelay());
+}
+
+//LRR
+function LRR() {
+    Player.getPlayer().attack();
+    Player.getPlayer().interact();
+    Time.sleep(getActionDelay());
+    Player.getPlayer().interact();
+    Time.sleep(getActionDelay());
+}
+
+//LRL
+function LRL() {
+    Player.getPlayer().attack();
+    Player.getPlayer().interact();
     Time.sleep(getActionDelay());
     Player.getPlayer().attack();
     Time.sleep(getActionDelay());
