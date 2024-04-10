@@ -15,12 +15,6 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 
 ## Features
 <br>
-<<<<<<< HEAD
-=======
-## Archer NOT supported ATM. working on a fix
-<br>
-ive only played mage so i had no clue archer spells were different
->>>>>>> c47a910c610d8c033b04e49d69081913d10d65be
 <br>
 <details>
 <summary>antiBlindness</summary>
@@ -28,7 +22,6 @@ ive only played mage so i had no clue archer spells were different
   Meant for TNA Berry
 </details>
 <details>
-<<<<<<< HEAD
 <summary>commandHandler</summary>
   /wynnqol <module> <setting> <variable>
   <br>
@@ -39,10 +32,9 @@ ive only played mage so i had no clue archer spells were different
   /wynnqol spellmacro delay [delay] ex: /wynnqol spellmacro delay 100
   <br>
   /wynnqol spellmacro archertoggle [true or false] ex: /wynnqol spellmacro archertoggle true
-  <br>
+  <be>
+  </details>
 <details>
-=======
->>>>>>> c47a910c610d8c033b04e49d69081913d10d65be
 <summary>singleSpells</summary>
 <br>
   Replacement for Wynntils spell macros. 
@@ -53,11 +45,7 @@ ive only played mage so i had no clue archer spells were different
   <br>
   Keys are binded as default wynntils spells, no way to rebind atm (other than manually changing the code)
   <br>
-<<<<<<< HEAD
   Requires commandHandler
-=======
-  You NEED the spellMacro to be enabled if you want to use /spellmacrodelay for this (i did not make a command handler it's just in spellMacro for now, i'll fix later)
->>>>>>> c47a910c610d8c033b04e49d69081913d10d65be
 </details>
 <details>
 <summary>spellMacro</summary>
@@ -70,16 +58,7 @@ ive only played mage so i had no clue archer spells were different
   <br>
   holding down the keybind loops the spell sequence
   <br>
-<<<<<<< HEAD
   Requires commandHandler
-=======
-  <br>
-  /spellmacro [spells] ex: rrr rrr rlr rll
-  <br>
-  /spellmacrokeybind [key] ex: /spellmacrokeybind n
-  <br>
-  /spellmacrodelay [delay] ex: /spellmacrodelay 100
->>>>>>> c47a910c610d8c033b04e49d69081913d10d65be
 </details>
 <details>
 <summary>voidHoleAlert</summary>
@@ -89,8 +68,4 @@ ive only played mage so i had no clue archer spells were different
 
 
 ## Credits
-<<<<<<< HEAD
 Credit to Melo for the beacon render stuff
-=======
-Credit to Melo for the beacon render stuff
->>>>>>> c47a910c610d8c033b04e49d69081913d10d65be
