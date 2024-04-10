@@ -14,8 +14,6 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 6. Then, click Enable and the Stopped button to get it running. 
 
 ## Features
-<br>
-<br>
 <details>
 <summary>antiBlindness</summary>
 <br>
