@@ -22,37 +22,73 @@ function getActionDelay() {
 }
 
 JsMacros.on('Key', true, JavaWrapper.methodToJava((event, context) => {
+    var ARCHER_TOGGLE_CONFIG = require('../config/archerToggle.json');
+    var archerToggle = ARCHER_TOGGLE_CONFIG.archerToggle === 'true';
     // rlr
-    if (event.action === 1 && event.key == "key.keyboard.z") { // if on press
-        if (isMacroRunning) return;
-        isMacroRunning = true;
-        context.releaseLock()
-        RLR();
-        isMacroRunning = false;
-    }
-    // rrr
-    if (event.action === 1 && event.key == "key.keyboard.x") { // if on press
-        if (isMacroRunning) return;
-        isMacroRunning = true;
-        context.releaseLock()
-        RRR();
-        isMacroRunning = false;
-    }
-    // rll
-    if (event.action === 1 && event.key == "key.keyboard.c") { // if on press
-        if (isMacroRunning) return;
-        isMacroRunning = true;
-        context.releaseLock()
-        RLL();
-        isMacroRunning = false;
-    }
-    // rrl
-    if (event.action === 1 && event.key == "key.keyboard.v") { // if on press
-        if (isMacroRunning) return;
-        isMacroRunning = true;
-        context.releaseLock()
-        RRL();
-        isMacroRunning = false;
+    if (archerToggle) {
+        if (event.action === 1 && event.key == "key.keyboard.z") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            LRL();
+            isMacroRunning = false;
+        }
+        // rrr
+        if (event.action === 1 && event.key == "key.keyboard.x") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            LLL();
+            isMacroRunning = false;
+        }
+        // rll
+        if (event.action === 1 && event.key == "key.keyboard.c") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            LRR();
+            isMacroRunning = false;
+        }
+        // rrl
+        if (event.action === 1 && event.key == "key.keyboard.v") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            LLR();
+            isMacroRunning = false;
+        }
+    } else {
+        if (event.action === 1 && event.key == "key.keyboard.z") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            RLR();
+            isMacroRunning = false;
+        }
+        // rrr
+        if (event.action === 1 && event.key == "key.keyboard.x") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            RRR();
+            isMacroRunning = false;
+        }
+        // rll
+        if (event.action === 1 && event.key == "key.keyboard.c") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            RLL();
+            isMacroRunning = false;
+        }
+        // rrl
+        if (event.action === 1 && event.key == "key.keyboard.v") { // if on press
+            if (isMacroRunning) return;
+            isMacroRunning = true;
+            context.releaseLock()
+            RRL();
+            isMacroRunning = false;
+        }
     }
     // cancel player left and right click while macro is running
     if (isMacroRunning && event.key === "key.mouse.left" || isMacroRunning && event.key === "key.mouse.right") {
