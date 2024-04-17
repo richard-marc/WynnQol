@@ -13,74 +13,49 @@ function getActionDelay() {
 JsMacros.on('Key', true, JavaWrapper.methodToJava((event, context) => {
     var ARCHER_TOGGLE_CONFIG = require('../config/archerToggle.json');
     var archerToggle = ARCHER_TOGGLE_CONFIG.archerToggle === 'true';
-    // rlr
-    if (archerToggle) {
-        if (event.action === 1 && event.key == "key.keyboard.z") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            LRL();
-            isMacroRunning = false;
-        }
-        // rrr
-        if (event.action === 1 && event.key == "key.keyboard.x") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            LLL();
-            isMacroRunning = false;
-        }
-        // rll
-        if (event.action === 1 && event.key == "key.keyboard.c") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            LRR();
-            isMacroRunning = false;
-        }
-        // rrl
-        if (event.action === 1 && event.key == "key.keyboard.v") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            LLR();
-            isMacroRunning = false;
-        }
-    } else {
-        if (event.action === 1 && event.key == "key.keyboard.z") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            RLR();
-            isMacroRunning = false;
-        }
-        // rrr
-        if (event.action === 1 && event.key == "key.keyboard.x") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            RRR();
-            isMacroRunning = false;
-        }
-        // rll
-        if (event.action === 1 && event.key == "key.keyboard.c") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            RLL();
-            isMacroRunning = false;
-        }
-        // rrl
-        if (event.action === 1 && event.key == "key.keyboard.v") { // if on press
-            if (isMacroRunning) return;
-            isMacroRunning = true;
-            context.releaseLock()
-            RRL();
-            isMacroRunning = false;
-        }
+    if (event.action === 1 && (event.key == "key.keyboard.z" || event.key == "key.keyboard.x" || event.key == "key.keyboard.c" || event.key == "key.keyboard.v")) { // if on press
+        if (isMacroRunning) return;
+        isMacroRunning = true;
+        context.releaseLock()
+        do {
+            // rlr
+            if (archerToggle && event.key == "key.keyboard.z") {
+                LRL();
+            }
+            // rrr
+            else if (archerToggle && event.key == "key.keyboard.x") {
+                LLL();
+            }
+            // rll
+            else if (archerToggle && event.key == "key.keyboard.c") {
+                LRR();
+            }
+            // rrl
+            else if (archerToggle && event.key == "key.keyboard.v") {
+                LLR();
+            }
+            // Non-archer toggle spells
+            else if (!archerToggle && event.key == "key.keyboard.z") {
+                RLR();
+            }
+            // rrr
+            else if (!archerToggle && event.key == "key.keyboard.x") {
+                RRR();
+            }
+            // rll
+            else if (!archerToggle && event.key == "key.keyboard.c") {
+                RLL();
+            }
+            // rrl
+            else if (!archerToggle && event.key == "key.keyboard.v") {
+                RRL();
+            }
+            Time.sleep(150); // Small delay to check the key press status again
+        } while (KeyBind.getPressedKeys().contains(event.key)); // Check if the initial key is still being pressed
+        isMacroRunning = false;
     }
     // cancel player left and right click while macro is running
-    if (isMacroRunning && event.key === "key.mouse.left" || isMacroRunning && event.key === "key.mouse.right") {
+    if (isMacroRunning && (event.key === "key.mouse.left" || event.key === "key.mouse.right")) {
         event.cancel();
     }
 }));
