@@ -20,6 +20,11 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
   Meant for TNA Berry
 </details>
 <details>
+<summary>autoClicker</summary>
+<br>
+  WIP but functional, don't use while holding spells rn
+</details>
+<details>
 <summary>commandHandler</summary>
   /wynnqol <module> <setting> <variable>
   <br>
