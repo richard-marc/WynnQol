@@ -3,9 +3,10 @@
 ## Usage
 Requires JSMacros 1.9.1 BETA (or higher). Crashes with 1.9.0
 <br>
-Full artifact:
+Download the artifact:
 https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 
+<br>
 1. Once JSMacros is installed, open the menu by using the hotkey.
 2. Open File Explorer and go to ./minecraft/config/jsMacros/Macros and put the WynnQol folder in there
 3. WynnQol has 3 folders that align with the three buttons in the JSMacros menu, Keys, Events, and Services. Currently, I have only made services. 
