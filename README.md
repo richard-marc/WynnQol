@@ -14,6 +14,8 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 6. Then, click Enable and the Stopped button to get it running. 
 
 ## Features
+Note: I broke antiBlindness and voidHoleAlert by accident last update i'll fix later
+
 <details>
 <summary>antiBlindness</summary>
 <br>
