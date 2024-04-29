@@ -16,6 +16,7 @@ https://github.com/JsMacros/JsMacros/actions/runs/8370057228
 
 ## Features
 Note: I broke antiBlindness and voidHoleAlert by accident last update i'll fix later
+Note 2: I removed the files I am too lazy to fix rn
 
 <details>
 <summary>antiBlindness</summary>
