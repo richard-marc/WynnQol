@@ -1,48 +1,33 @@
 # WynnQol
 
 ## Usage
-Requires JSMacros 1.9.1 BETA (or higher). Crashes with 1.9.0
+Requires JSMacros 1.9.2.
 <br>
-Download the artifact:
-https://github.com/JsMacros/JsMacros/actions/runs/8370057228
-
 <br>
 1. Once JSMacros is installed, open the menu by using the hotkey.
-2. Open File Explorer and go to ./minecraft/config/jsMacros/Macros and put the WynnQol folder in there
-3. WynnQol has 3 folders that align with the three buttons in the JSMacros menu, Keys, Events, and Services. Currently, I have only made services. 
-4. Click on Services, then the + button. Name the service whatever you wish.
-5. Then under the File button, click the ./ and navigate to the services folder, and add whichever macro you want to add.
-6. Then, click Enable and the Stopped button to get it running. 
+2. Open File Explorer and go to ./minecraft/config/jsMacros/Macros and put the WynnQol folder in there 
+3. Click on Services, then the + button. Name the service whatever you wish.
+4. Then under the File button, click the ./ and navigate to the services folder, and add main.js
+5. Then, click Enable and the Stopped button to get it running.
 
 ## Features
-Note: I broke antiBlindness and voidHoleAlert by accident last update i'll fix later
-Note 2: I removed the files I am too lazy to fix rn
 
 <details>
-<summary>antiBlindness</summary>
-<br>
-  Meant for TNA Berry
-</details>
-<details>
-<summary>autoClicker</summary>
-<br>
-  WIP but functional, don't use while holding spells rn
-</details>
-<details>
-<summary>commandHandler</summary>
-  /wynnqol <module> <setting> <variable>
+<summary>Commands</summary>
   <br>
-  /wynnqol spellmacro spells [spells] ex: /wynnqol spellmacro spells rrr rrr rlr rll
+  /wynnqol spell_sequence [spells] ex: /wynnqol spell_sequence rrr rrr rlr rll Summary: Casts spells in this order.
   <br>
-  /wynnqol spellmacro keybind [key] ex: /wynnqol spellmacro keybind n
+  /wynnqol keybind [letter] Summary: Keybind for the looping spell macro
   <br>
-  /wynnqol spellmacro delay [delay] ex: /wynnqol spellmacro delay 100
+  /wynnqol action_delay [number] Summary: Delay for spell macro casting
   <br>
-  /wynnqol spellmacro archertoggle [true or false] ex: /wynnqol spellmacro archertoggle true
-  <be>
+  /wynnqol archer_toggle [true/false] Summary: Changes Spell macros and Single spells depending on if you are playing archer or not.
+  <br>
+  /wynnqol weapon_speed [your weapons speed] Summary: Used for attacking mid-cast. Ex, /wynnqol spell_sequence rll rll l l l. The 3 l's will make it attack twice.
+  <br>
   </details>
 <details>
-<summary>singleSpells</summary>
+<summary>Single Spells</summary>
 <br>
   Replacement for Wynntils spell macros. 
   <br>
@@ -52,12 +37,11 @@ Note 2: I removed the files I am too lazy to fix rn
   <br>
   Keys are binded as default wynntils spells, no way to rebind atm (other than manually changing the code)
   <br>
-  Requires commandHandler
 </details>
 <details>
-<summary>spellMacro</summary>
+<summary>Spell Macro</summary>
 <br>
-  spell macro supports an "infinite" number of spells
+  Spell macro supports an "infinite" number of spells
   <br>
   the keybind & spell sequence & delay save so you don't have to do it again when you relaunch the game
   <br>
@@ -65,14 +49,9 @@ Note 2: I removed the files I am too lazy to fix rn
   <br>
   holding down the keybind loops the spell sequence
   <br>
-  Requires commandHandler
+  Also supports attacks mid-macro. Simply put l or r depending on archer or not.
 </details>
 <details>
-<summary>voidHoleAlert</summary>
-<br>
-  TNA qol, alerts when a void hole spawns. also renders a beacon on its location.
 </details>
 
-
-## Credits
-Credit to Melo for the beacon render stuff
+## Thanks to JSMacros community
