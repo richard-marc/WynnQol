@@ -15,6 +15,7 @@ let limiter = false;
 let mouseDown = false;
 let weaponSpeedNums = {
     "weaponSpeedNums": [
+        { INSTANT: 20 },
         { SUPER_FAST: 233 },
         { VERY_FAST: 323 },
         { FAST: 401 },
@@ -57,7 +58,7 @@ const cmd = Chat.getCommandManager().createCommandBuilder('wynnqol').executes(Ja
         Chat.log(`Archer toggle: ${archerToggle}`);
     })).or().or()
     .literalArg("weapon_speed")
-    .wordArg("speed").suggestMatching("SUPER_SLOW", "VERY_SLOW", "SLOW", "NORMAL", "FAST", "VERY_FAST", "SUPER_FAST").executes(JavaWrapper.methodToJava((event) => {
+    .wordArg("speed").suggestMatching("SUPER_SLOW", "VERY_SLOW", "SLOW", "NORMAL", "FAST", "VERY_FAST", "SUPER_FAST", "INSTANT").executes(JavaWrapper.methodToJava((event) => {
         configJson.weapon_speed = event.getArg("speed").toUpperCase();
         weaponSpeed = configJson.weapon_speed;
         configFS.write(JSON.stringify(configJson))
