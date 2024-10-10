@@ -54,4 +54,4 @@ Requires JSMacros 1.9.2.
 <details>
 </details>
 
-## Thanks to JSMacros community
+### Thanks to JSMacros community
